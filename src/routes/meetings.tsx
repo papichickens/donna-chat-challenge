@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { getSampleMeetings } from "../utils/models";
+import { getSampleMeetings } from "../utils/models.js";
 
 export function loader() {
   return getSampleMeetings();
