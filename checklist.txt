@@ -38,28 +38,25 @@ FEATURE: LOG A MEETING
 ----------------------
 [x] Create log form for person + notes (logMeeting.jsx)
 [x] Add action() to handle POST form submission
-[ ] (Optional) Simulate local storage or log to console
+[x] (Optional) Simulate local storage or log to console
 
 
 FEATURE: CHAT WITH DONNA
 -------------------------
-[ ] Create ChatBox component (components/ChatBox.jsx)
-[ ] Add basic rule-based logic to simulate responses
-[ ] Simulate SSE by streaming chunks with setTimeout
-[ ] Create /chat route (routes/chat.jsx) to render ChatBox
+[x] Create ChatBox component (components/ChatBox.jsx)
 
 
 OPTIONAL: LLM INTEGRATION
 -------------------------
-[ ] Set up .env with VITE_OPENAI_API_KEY=...
-[ ] Create API call to OpenAI/Gemini
-[ ] Stream LLM response using fetch + ReadableStream
+[x Set up .env with VITE_OPENAI_API_KEY=...
+[x] Create API call to OpenAI/Gemini
+[x] Stream LLM response using fetch + ReadableStream
 
 
 FINAL TOUCHES
 -------------
-[ ] Create README.md with setup + usage instructions
-[ ] Add .gitignore for node_modules, .env
-[ ] Test routes: /chat, /meetings, /log
+[x] Create README.md with setup + usage instructions
+[x] Add .gitignore for node_modules, .env
+[x] Test routes: /chat, /meetings, /log
 [ ] Push to GitHub or zip and send to:
     xander.berkein@askdonna.com
