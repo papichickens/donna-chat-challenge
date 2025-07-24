@@ -1,0 +1,62 @@
+DONNA CHAT ASSISTANT – DEVELOPMENT CHECKLIST
+===========================================
+
+PROJECT SETUP
+-------------
+[x] Create Vite React app: 
+    npm create vite@latest donna-chat -- --template react
+
+[x] Install dependencies:
+    - npm install
+    - npm install react-router-dom@7
+
+[x] Set up folder structure:
+    src/
+      routes/
+      components/
+      data/
+
+
+REACT ROUTER SETUP (FRAMEWORK MODE)
+-----------------------------------
+[x] Set up router with createBrowserRouter in main.jsx
+[x] Create Root layout route (routes/root.jsx)
+[x] Define nested routes:
+    - /chat
+    - /meetings
+    - /log
+
+
+FEATURE: VIEW UPCOMING MEETINGS
+-------------------------------
+[x] Hardcode meeting data (in meetings.jsx or data/meetings.js)
+[x] Create loader() to return meeting data
+[x] Display meetings list using useLoaderData()
+
+
+FEATURE: LOG A MEETING
+----------------------
+[x] Create log form for person + notes (logMeeting.jsx)
+[x] Add action() to handle POST form submission
+[x] (Optional) Simulate local storage or log to console
+
+
+FEATURE: CHAT WITH DONNA
+-------------------------
+[x] Create ChatBox component (components/ChatBox.jsx)
+
+
+OPTIONAL: LLM INTEGRATION
+-------------------------
+[x Set up .env with VITE_OPENAI_API_KEY=...
+[x] Create API call to OpenAI/Gemini
+[x] Stream LLM response using fetch + ReadableStream
+
+
+FINAL TOUCHES
+-------------
+[x] Create README.md with setup + usage instructions
+[x] Add .gitignore for node_modules, .env
+[x] Test routes: /chat, /meetings, /log
+[ ] Push to GitHub or zip and send to:
+    xander.berkein@askdonna.com

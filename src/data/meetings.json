@@ -1,0 +1,76 @@
+{
+  "upcoming": [
+    {
+      "id": 1,
+      "time": "2025-07-25T14:00:00Z",
+      "with": "John Doe",
+      "company": "Corp Corp",
+      "topic": "POC discussion"
+    },
+    {
+      "with": "John Pork",
+      "company": "BIZ4PIMPS",
+      "topic": "Pimping",
+      "time": "2025-07-30T10:52",
+      "id": 1753350838284
+    },
+    {
+      "with": "John Pork",
+      "company": "BIZ4PImps",
+      "notes": null,
+      "topic": "pimping cars",
+      "time": null,
+      "id": 1753354470873
+    }
+  ],
+  "logged": [
+    {
+      "with": "Dave",
+      "company": "Cloud Solutions",
+      "notes": "Meeting about our Q3 goals",
+      "topic": null,
+      "time": null,
+      "id": 1753353879051
+    },
+    {
+      "with": "Dave",
+      "company": null,
+      "notes": "Meeting about our Q3 goals",
+      "topic": null,
+      "time": null,
+      "id": 1753355178644
+    },
+    {
+      "with": "",
+      "company": "",
+      "notes": "",
+      "topic": null,
+      "time": null,
+      "id": 1753355209372
+    },
+    {
+      "with": "John Doe",
+      "company": "Corp Corp",
+      "notes": "They're interested in Donna and would like to start a POC.",
+      "topic": null,
+      "time": null,
+      "id": 1753355218908
+    },
+    {
+      "with": null,
+      "company": null,
+      "notes": null,
+      "topic": null,
+      "time": null,
+      "id": 1753355468826
+    },
+    {
+      "with": "John Doe",
+      "company": "Pimps Corp",
+      "notes": "They're interested in Donna and would like to start a Pimp Donna sale.",
+      "topic": null,
+      "time": null,
+      "id": 1753355501020
+    }
+  ]
+}

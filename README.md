@@ -1,12 +1,62 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Getting Started
 
-Currently, two official plugins are available:
+Follow these steps to run the application locally on your machine.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Clone the Repository
 
-## Expanding the ESLint configuration
+```bash
+git clone <your-repository-url>
+cd donna-chat
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+This will install both frontend and backend dependencies (if using a unified setup).
+
+### 3. Set Up Environment Variables
+
+1. Create a `.env` file in the root directory.
+2. Add your Google Gemini API key:
+
+```env
+GOOGLE_API_KEY="your-api-key-here"
+```
+
+You can get a free API key from [Google AI Studio](https://makersuite.google.com/).
+
+### 4. Run the Application
+
+You'll need to open two terminal windows:
+
+**Terminal 1: Start the Backend**
+
+```bash
+node server.js
+```
+
+You should see:
+
+```
+[SERVER] Express server started successfully. Listening on http://localhost:3001
+```
+
+**Terminal 2: Start the Frontend**
+
+```bash
+npm run dev
+```
+
+You’ll see something like:
+
+```
+Local: http://localhost:5173/
+```
+
+### 5. Open in Browser
+
+Go to [http://localhost:5173](http://localhost:5173) to use the Donna AI assistant.
