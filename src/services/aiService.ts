@@ -1,6 +1,3 @@
-
-
-
 export async function streamAIResponse(userInput: string, onChunk: (text: string) => void): Promise<void> {
   try {
     const response = await fetch('http://localhost:3001/chat-stream', {

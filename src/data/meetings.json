@@ -1,0 +1,19 @@
+{
+  "upcoming": [
+    {
+      "id": 1,
+      "time": "2025-07-25T14:00:00Z",
+      "with": "John Doe",
+      "company": "Corp Corp",
+      "topic": "POC discussion"
+    },
+    {
+      "with": "John Pork",
+      "company": "BIZ4PIMPS",
+      "topic": "Pimping",
+      "time": "2025-07-30T10:52",
+      "id": 1753350838284
+    }
+  ],
+  "logged": []
+}

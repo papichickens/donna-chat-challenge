@@ -39,37 +39,37 @@ export function getSampleMeetings() {
   ];
 }
 
-/**
- * Prepares a LoggedMeeting object from form input
- * @param {FormData} formData
- * @returns {LoggedMeeting}
- */
-export function parseLoggedMeeting(formData) {
-  return {
-    person: formData.get("person"),
-    notes: formData.get("notes"),
-    timestamp: new Date().toISOString(),
-  };
-}
+// /**
+//  * Prepares a LoggedMeeting object from form input
+//  * @param {FormData} formData
+//  * @returns {LoggedMeeting}
+//  */
+// export function parseLoggedMeeting(formData) {
+//   return {
+//     person: formData.get("person"),
+//     notes: formData.get("notes"),
+//     timestamp: new Date().toISOString(),
+//   };
+// }
 
-/**
- * Converts meeting data into a prompt-friendly string for LLM
- * @param {LoggedMeeting} loggedMeeting
- * @returns {string} Prompt string for AI
- */
-export function formatLoggedMeetingForAI(loggedMeeting) {
-  return `Meeting Log:\n
-- Person: ${loggedMeeting.person}
-- Notes: ${loggedMeeting.notes}
-- Logged At: ${loggedMeeting.timestamp}`;
-}
+// /**
+//  * Converts meeting data into a prompt-friendly string for LLM
+//  * @param {LoggedMeeting} loggedMeeting
+//  * @returns {string} Prompt string for AI
+//  */
+// export function formatLoggedMeetingForAI(loggedMeeting) {
+//   return `Meeting Log:\n
+// - Person: ${loggedMeeting.person}
+// - Notes: ${loggedMeeting.notes}
+// - Logged At: ${loggedMeeting.timestamp}`;
+// }
 
-/**
- * Converts a Meeting object into a user-facing chat response
- * @param {Meeting} meeting
- * @returns {string} Chat response
- */
-export function generateMeetingSummary(meeting) {
-  const localTime = new Date(meeting.time).toLocaleString();
-  return `You have a meeting at ${localTime} with ${meeting.with} from ${meeting.company} about "${meeting.topic}".`;
-}
+// /**
+//  * Converts a Meeting object into a user-facing chat response
+//  * @param {Meeting} meeting
+//  * @returns {string} Chat response
+//  */
+// export function generateMeetingSummary(meeting) {
+//   const localTime = new Date(meeting.time).toLocaleString();
+//   return `You have a meeting at ${localTime} with ${meeting.with} from ${meeting.company} about "${meeting.topic}".`;
+// }

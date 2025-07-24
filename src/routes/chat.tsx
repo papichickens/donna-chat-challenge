@@ -26,60 +26,21 @@ const Chat = () => {
     setMessages((prev) => [...prev, userMessage]);
     setUserInput("");
 
-    // Add a placeholder Donna message
     const donnaMessageId = Date.now() + 1;
     setMessages((prev) => [
       ...prev,
       { id: donnaMessageId, text: "...", sender: "donna" },
     ]);
 
-    try {
-      const response = await fetch("http://localhost:3001/chat-stream", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userInput }),
-      });
-
-      if (!response.body) throw new Error("No response body");
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let finalText = "";
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value);
-        const lines = chunk.split("\n");
-
-        for (const line of lines) {
-          if (line.startsWith("data:")) {
-            const parsed = JSON.parse(line.replace("data: ", ""));
-            if (parsed?.content) {
-              finalText += parsed.content;
-              setMessages((prev) =>
-                prev.map((msg) =>
-                  msg.id === donnaMessageId ? { ...msg, text: finalText } : msg
-                )
-              );
-            }
-          }
-        }
-      }
-    } catch (err) {
-      console.error("Error:", err);
+    await streamAIResponse(userInput, (updatedText) => {
       setMessages((prev) =>
         prev.map((msg) =>
-          msg.id === donnaMessageId
-            ? { ...msg, text: "Error getting response." }
-            : msg
+          msg.id === donnaMessageId ? { ...msg, text: updatedText } : msg
         )
       );
-    }
+    });
   };
 
-  // Auto-scroll to the bottom
   useEffect(() => {
     if (chatWindowRef.current) {
       chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
